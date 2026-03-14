@@ -1,17 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { Suspense } from "react";
+import Countries from "./Components/Countries/Countries";
 
-function App() {
-  const [count, setCount] = useState(0)
+const countriesPromice = fetch(
+  "https://openapi.programming-hero.com/api/all",
+).then(res => res.json());
 
+const App = () => {
   return (
-    <>
-     
-    </>
-  )
-}
+    <div>
+      <Suspense fallback={<h2>Data is Loading....</h2>}>
+       
+        <Countries countriesPromice = {countriesPromice}></Countries>
 
-export default App
+      </Suspense>
+    </div>
+  );
+};
+
+export default App;

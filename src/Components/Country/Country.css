@@ -1,0 +1,25 @@
+.country{
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid salmon;
+    border-radius: 20px;
+}
+
+.country-visited{
+    background-color: rgb(158, 226, 226);
+    color: black;
+}
+
+.btn{
+    padding: 5px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(4, 19, 35);
+}
+
+.btn:hover{
+    background-color: rgb(9, 27, 21);
+}
